@@ -22,6 +22,11 @@
 }
 
 .submit:hover {
+    background-color: $Red;
+    color: white;
+}
+
+.submit:active {
     box-shadow: none;
 }
 
