@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Calendar from './calendar/calendar'
+import Calendar from './calendar/calendar_modal'
 
 const ModalWindow = props => {
     switch (props.currentModal) {
