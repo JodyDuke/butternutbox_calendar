@@ -1,0 +1,27 @@
+.button {
+    cursor: pointer;
+    font-family: 'CooperHewitt-Semibold';
+    font-weight: bold;
+    font-size: 80%;
+    margin: 5px;
+    border: 0px;
+    background-color: white;
+    padding: 12px 20px 9px 20px;
+    outline: none;
+
+}
+
+.cancel {
+    color: $Grey-text;
+}
+
+.submit {
+    border: 1px solid $Red;
+    color: $Red;
+    box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.4);
+}
+
+.submit:hover {
+    box-shadow: none;
+}
+
