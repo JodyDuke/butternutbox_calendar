@@ -49,9 +49,6 @@ body {
   -moz-animation: pop 0.4s;
   -o-animation: pop 0.4s;
   animation: pop 0.4s; }
-  .calendar-modal .calendar {
-    flex: 1;
-    background-color: pink; }
   .calendar-modal .buttons-container {
     display: flex;
     align-items: center;
@@ -157,6 +154,34 @@ body {
   box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.4); }
 
 .submit:hover {
+  background-color: #e66c55;
+  color: white; }
+
+.submit:active {
   box-shadow: none; }
+
+.calendar-container {
+  font-family: 'GTPressuraLight';
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-gap: 5px;
+  padding: 0px 20px; }
+  .calendar-container .calendar-weekdays {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1d6c93; }
+  .calendar-container .calendar-node {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .calendar-container .available {
+    color: #e66c55;
+    border: 1px solid #e66c55; }
+  .calendar-container .unavailable {
+    color: #919191;
+    background-color: #d8d8d8; }
 
 /*# sourceMappingURL=index.css.map */
