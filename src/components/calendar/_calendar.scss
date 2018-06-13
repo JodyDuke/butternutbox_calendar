@@ -15,9 +15,15 @@
     }  
     
     .calendar-node {
+        cursor: pointer;
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .active {
+        color: white;
+        background-color: $Red;
     }
 
     .available {
