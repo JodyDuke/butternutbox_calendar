@@ -1,4 +1,16 @@
+@font-face {
+  font-family: 'GTPressuraLight';
+  src: url("../../fonts/GTPressuraMono-Light.eot");
+  /* IE9 Compat Modes */
+  src: local("GTPressuraMono"), url("../../fonts/GTPressuraMono-Light.eot#iefix") format("embedded-opentype"), url("../../fonts/GTPressuraMono-Light.woff2") format("woff2"), url("../../fonts/GTPressuraMono-Light.woff") format("woff"), url("../../fonts/GTPressuraMono-Light.ttf") format("truetype"); }
+@font-face {
+  font-family: 'CooperHewitt-Semibold';
+  src: url("../../fonts/CooperHewitt-Semibold.eot");
+  /* IE9 Compat Modes */
+  src: local("CooperHewitt-Semibold"), url("../../fonts/CooperHewitt-Semibold.eot#iefix") format("embedded-opentype"), url("../../fonts/CooperHewitt-Semibold.woff2") format("woff2"), url("../../fonts/CooperHewitt-Semibold.woff") format("woff"), url("../../fonts/CooperHewitt-Semibold.ttf") format("truetype"); }
 body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   margin: 0;
   padding: 0; }
 
@@ -26,7 +38,9 @@ body {
   height: 100vh; }
 
 .calendar-modal {
-  height: 500px;
+  display: flex;
+  flex-direction: column;
+  height: 530px;
   width: 400px;
   background-color: white;
   border: 1px solid #1d6c93;
@@ -35,54 +49,114 @@ body {
   -moz-animation: pop 0.4s;
   -o-animation: pop 0.4s;
   animation: pop 0.4s; }
+  .calendar-modal .calendar {
+    flex: 1;
+    background-color: pink; }
+  .calendar-modal .buttons-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px; }
+  .calendar-modal .date-select-container {
+    height: 60px;
+    display: flex;
+    flex-direction: row; }
+    .calendar-modal .date-select-container .arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px; }
+      .calendar-modal .date-select-container .arrow img {
+        height: 40%;
+        width: 40%; }
+    .calendar-modal .date-select-container .date {
+      font-family: 'CooperHewitt-Semibold';
+      color: #1d6c93;
+      text-align: center;
+      flex: 1; }
+  .calendar-modal .modal-warning-container {
+    height: 80px;
+    margin: 0px 20px; }
+    .calendar-modal .modal-warning-container .modal-warning {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin: 15px 0 0 0;
+      height: 50px;
+      font-family: 'GTPressuraLight';
+      line-height: 120%;
+      color: #1d6c93;
+      background-color: #f0e118; }
 
 @-webkit-keyframes pop {
   0% {
     width: 400px;
-    height: 500px;
+    height: 530px;
     opacity: 0.8; }
   50% {
     width: calc(400px + 5%);
-    height: calc(500px + 5%);
+    height: calc(530px + 5%);
     opacity: 1; }
   100% {
     width: 400px;
-    height: 500px; } }
+    height: 530px; } }
 @-moz-keyframes pop {
   0% {
     width: 400px;
-    height: 500px;
+    height: 530px;
     opacity: 0.8; }
   50% {
     width: calc(400px + 5%);
-    height: calc(500px + 5%);
+    height: calc(530px + 5%);
     opacity: 1; }
   100% {
     width: 400px;
-    height: 500px; } }
+    height: 530px; } }
 @-o-keyframes pop {
   0% {
     width: 400px;
-    height: 500px;
+    height: 530px;
     opacity: 0.8; }
   50% {
     width: calc(400px + 5%);
-    height: calc(500px + 5%);
+    height: calc(530px + 5%);
     opacity: 1; }
   100% {
     width: 400px;
-    height: 500px; } }
+    height: 530px; } }
 @keyframes pop {
   0% {
     width: 400px;
-    height: 500px;
+    height: 530px;
     opacity: 0.8; }
   50% {
     width: calc(400px + 5%);
-    height: calc(500px + 5%);
+    height: calc(530px + 5%);
     opacity: 1; }
   100% {
     width: 400px;
-    height: 500px; } }
+    height: 530px; } }
+.button {
+  cursor: pointer;
+  font-family: 'CooperHewitt-Semibold';
+  font-weight: bold;
+  font-size: 80%;
+  margin: 5px;
+  border: 0px;
+  background-color: white;
+  padding: 12px 20px 9px 20px;
+  outline: none; }
+
+.cancel {
+  color: #919191; }
+
+.submit {
+  border: 1px solid #e66c55;
+  color: #e66c55;
+  box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.4); }
+
+.submit:hover {
+  box-shadow: none; }
 
 /*# sourceMappingURL=index.css.map */
