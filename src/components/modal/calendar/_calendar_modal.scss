@@ -19,11 +19,6 @@
     border-radius: 3px;
     @include animation('pop 0.4s');
 
-    .calendar {
-        flex: 1;
-        background-color: pink;
-    }
-
     .buttons-container {
         display: flex;
         align-items: center;
