@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { currentModal } from '../../redux/actions';
-import CalendarSVG from '../../images/calendar';
+import CalendarSVG from '../../images/calendar_image';
 
 const mapDispatchToProps = dispatch => ({
     currentModal: input => dispatch(currentModal(input))
