@@ -41,7 +41,7 @@ const initialState = {
 const currentCalendar = (state = initialState, action) => {
     switch(action.type){
         case CHANGE_DAY:
-            return {...state, activeDay: action.payload}
+            return {...state, activeDay: action.int}
         default: 
             return state
     }
