@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { currentModal } from '../../../redux/actions'
 import Button from '../../buttons/button'
 
-const MapDispatchToProps = dispatch => ({
+const mapDispatchToProps = dispatch => ({
     currentModal: input => dispatch(currentModal(input))
 })
 
@@ -15,16 +15,16 @@ class ConnectedCalendarModal extends Component {
                 <div className="calendar-modal">
                     <div className="date-select-container">
                         <div className="arrow">
-                            <img src={require('../../../images/left-arrow.png')} />
+                            <img alt="left arrow" src={require('../../../images/left-arrow.png')} />
                         </div>
                         <div className="date">
                             <h4>May 2018</h4>
                         </div>
                         <div className="arrow">
-                            <img src={require('../../../images/right-arrow.png')} />
+                            <img alt="right arrow" src={require('../../../images/right-arrow.png')} />
                         </div>
                     </div>
-                    <Calendar styles="calendar" />
+                    <Calendar />
                     <div className="modal-warning-container">
                         <div className="modal-warning">
                             <p>Delivery dates will change<br />for all upcoming boxes</p>
@@ -40,6 +40,6 @@ class ConnectedCalendarModal extends Component {
     }
 }
 
-const CalendarModal = connect(null, MapDispatchToProps)(ConnectedCalendarModal)
+const CalendarModal = connect(null, mapDispatchToProps)(ConnectedCalendarModal)
 
 export default CalendarModal
