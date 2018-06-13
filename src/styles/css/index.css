@@ -79,7 +79,7 @@ body {
       align-items: center;
       justify-content: center;
       text-align: center;
-      margin: 15px 0 0 0;
+      margin: 25px 0 0 0;
       height: 50px;
       font-family: 'GTPressuraLight';
       line-height: 120%;
@@ -174,9 +174,13 @@ body {
     align-items: center;
     color: #1d6c93; }
   .calendar-container .calendar-node {
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center; }
+  .calendar-container .active {
+    color: white;
+    background-color: #e66c55; }
   .calendar-container .available {
     color: #e66c55;
     border: 1px solid #e66c55; }
