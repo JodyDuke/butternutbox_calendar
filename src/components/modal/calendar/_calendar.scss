@@ -1,0 +1,26 @@
+.calendar-modal-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+
+}
+    .calendar-modal {
+        height: 500px;
+        width: 400px;
+        background-color: white;
+        border: 1px solid $Blue;
+        border-radius: 3px;
+        @include animation('pop 0.4s')
+    }
+
+    @include keyframes(pop) {
+        0% {width: 400px; height: 500px; opacity: 0.8}
+        50% { width: calc(400px + 5%); height: calc(500px + 5%); opacity: 1}
+        100% { width: 400px; height: 500px}  
+    }
+
+
