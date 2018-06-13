@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1d6c93;
+  width: 100vw;
+  height: 100vh; }
+
+.calendar-icon-container {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  fill: #f0e118; }
+
+/*# sourceMappingURL=index.css.map */
