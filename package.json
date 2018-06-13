@@ -1,0 +1,19 @@
+{
+  "name": "butternut_box_calendar",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-redux": "^5.0.7",
+    "react-scripts": "1.1.4",
+    "redux": "^4.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "sass-watch": "sass --watch src/components:src/styles/css/styles.css src/styles/scss/index.scss:src/styles/css/styles.css"
+  }
+}
