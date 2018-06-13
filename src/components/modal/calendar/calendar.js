@@ -3,7 +3,11 @@ import React, { Component } from 'react';
 class Calendar extends Component {
     render() {
         return (
-            <div>calendar</div>
+            <div className="calendar-modal-container">
+                <div className="calendar-modal">
+                    calendar
+                </div>
+            </div>
         )
     }
 }
