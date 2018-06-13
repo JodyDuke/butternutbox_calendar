@@ -1,0 +1,15 @@
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $Blue;
+    width: 100vw;
+    height: 100vh;
+}
+
+.calendar-icon-container {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    fill: $Yellow;
+}
