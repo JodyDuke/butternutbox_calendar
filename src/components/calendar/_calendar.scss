@@ -1,0 +1,32 @@
+.calendar-container {
+    font-family: 'GTPressuraLight';
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 5px;
+    padding: 0px 20px;
+
+    .calendar-weekdays {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $Blue;
+    }  
+    
+    .calendar-node {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .available {
+        color: $Red;
+        border: 1px solid $Red;
+    }
+
+    .unavailable {
+        color: $Grey-text;
+        background-color: $Light-grey;
+    }
+}
