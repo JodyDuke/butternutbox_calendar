@@ -1,0 +1,85 @@
+.calendar-modal-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.calendar-modal {
+    display: flex;
+    flex-direction: column;
+    height: 530px;
+    width: 400px;
+    background-color: white;
+    border: 1px solid $Blue;
+    border-radius: 3px;
+    @include animation('pop 0.4s');
+
+    .calendar {
+        flex: 1;
+        background-color: pink;
+    }
+
+    .buttons-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 80px;
+    }
+
+    .date-select-container {
+        height: 60px;
+        display: flex;
+        flex-direction: row;
+
+        .arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+
+            img {
+                height: 40%;
+                width: 40%;
+            }
+        }
+
+        .date {
+            font-family: 'CooperHewitt-Semibold'; 
+            color: $Blue;        
+            text-align: center;
+            flex: 1;
+        }
+    }
+
+    .modal-warning-container {
+        height: 80px;
+        margin: 0px 20px;
+
+        .modal-warning {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin: 15px 0 0 0;
+            height: 50px;
+            font-family: 'GTPressuraLight';
+            line-height: 120%;
+            color: $Blue;
+            background-color: $Yellow;
+        }
+    }
+
+}
+
+
+@include keyframes(pop) {
+    0% {width: 400px; height: 530px; opacity: 0.8}
+    50% { width: calc(400px + 5%); height: calc(530px + 5%); opacity: 1}
+    100% { width: 400px; height: 530px}  
+}
+
