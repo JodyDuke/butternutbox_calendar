@@ -39,15 +39,14 @@ class ConnectedCalendar extends Component {
                     return <div key={k} className="calendar-weekdays">{e}</div>
                 })}
                 {this.props.store.calendar.map((e, k) => {
-                    if (Object.keys(e)[0] == this.props.store.activeDay) {
+                    if (Object.keys(e)[0] === this.props.store.activeDay.toString()) {
                         return <CalendarNode key={k} styles="calendar-node active" number={Object.keys(e)} />                        
                     }
-                    else if(Object.values(e)[0] === true) {
-                        return <CalendarNode key={k} styles="calendar-node available" number={Object.keys(e)} />
+                    else if(Object.keys(e)[0]){  
+                        return <CalendarNode key={k} styles={Object.values(e)[0] === true ? 'calendar-node available' : 'calendar-node unavailable'} number={Object.keys(e)} />    
                     }
-
-                    return <CalendarNode key={k} styles="calendar-node unavailable" number={Object.keys(e)}/>
-
+                    //returns empty div to space the beginning of the month
+                    return <div></div>
                 })}
             </div>
         )
