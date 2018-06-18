@@ -46,7 +46,7 @@ class ConnectedCalendar extends Component {
                         return <CalendarNode key={k} styles={Object.values(e)[0] === true ? 'calendar-node available' : 'calendar-node unavailable'} number={Object.keys(e)} />    
                     }
                     //returns empty div to space the beginning of the month
-                    return <div></div>
+                    return <div key={k}></div>
                 })}
             </div>
         )
