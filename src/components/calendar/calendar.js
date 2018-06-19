@@ -38,8 +38,8 @@ class ConnectedCalendar extends Component {
                 {days.map((e, k) => {
                     return <div key={k} className="calendar-weekdays">{e}</div>
                 })}
-                {this.props.store.calendar.map((e, k) => {
-                    if (Object.keys(e)[0] === this.props.store.activeDay.toString()) {
+                {this.props.store.calendar[this.props.store.currentMonth].days.map((e, k) => {
+                    if (Object.keys(e)[0] === this.props.store.activeDay.toString() && this.props.store.activeMonth === this.props.store.currentMonth) {
                         return <CalendarNode key={k} styles="calendar-node active" number={Object.keys(e)} />                        
                     }
                     else if(Object.keys(e)[0]){  
