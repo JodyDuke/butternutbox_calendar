@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import Calendar from '../../calendar/calendar';
 import { connect } from 'react-redux';
-import { currentModal } from '../../../redux/actions'
+import { currentModal, changeMonth } from '../../../redux/actions'
 import Button from '../../buttons/button'
 
 const mapDispatchToProps = dispatch => ({
-    currentModal: input => dispatch(currentModal(input))
+    currentModal: input => dispatch(currentModal(input)),
+    changeMonth: input => dispatch(changeMonth(input)) 
+})
+
+const mapStateToProps = state => ({
+    state: state
 })
 
 class ConnectedCalendarModal extends Component {
@@ -14,13 +19,13 @@ class ConnectedCalendarModal extends Component {
             <div className="calendar-modal-container">
                 <div className="calendar-modal">
                     <div className="date-select-container">
-                        <div className="arrow">
+                        <div className="arrow" onClick={() => this.props.changeMonth(this.props.state.currentCalendar.currentMonth - 1)}>
                             <img alt="left arrow" src={require('../../../images/left-arrow.png')} />
                         </div>
                         <div className="date">
-                            <h4>May 2018</h4>
+                            <h4>{this.props.state.currentCalendar.calendar[this.props.state.currentCalendar.currentMonth].month} {this.props.state.currentCalendar.calendar[this.props.state.currentCalendar.currentMonth].year}</h4>
                         </div>
-                        <div className="arrow">
+                        <div className="arrow" onClick={() => this.props.changeMonth(this.props.state.currentCalendar.currentMonth + 1)}>
                             <img alt="right arrow" src={require('../../../images/right-arrow.png')} />
                         </div>
                     </div>
@@ -40,6 +45,6 @@ class ConnectedCalendarModal extends Component {
     }
 }
 
-const CalendarModal = connect(null, mapDispatchToProps)(ConnectedCalendarModal)
+const CalendarModal = connect(mapStateToProps, mapDispatchToProps)(ConnectedCalendarModal)
 
 export default CalendarModal
