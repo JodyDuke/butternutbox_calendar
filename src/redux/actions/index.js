@@ -1,4 +1,4 @@
-import { CURRENT_MODAL, CHANGE_DAY } from "../constants";
+import { CURRENT_MODAL, CHANGE_DAY, CHANGE_MONTH } from "../constants";
 
 export const currentModal = modal => ({
     type: CURRENT_MODAL,
@@ -7,5 +7,10 @@ export const currentModal = modal => ({
 
 export const changeDay = int => ({
     type: CHANGE_DAY,
+    int
+})
+
+export const changeMonth = int => ({
+    type: CHANGE_MONTH,
     int
 })
